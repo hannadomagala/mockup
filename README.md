@@ -1,2 +1,3 @@
-# portfolio
-CodersCamp, projekt 1 - HTML + CSS
+# Projekt 1 - HTML + CSS
+
+Projekt realizujący zadanie z działu I - **CodersCamp**.
