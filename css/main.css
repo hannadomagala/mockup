@@ -1,18 +1,18 @@
 :root{
-    --bodyFont: 'Open Sans', sans-serif;
+    --bodyFont: 'Nunito', sans-serif;;
     --headerFont: 'Noto Sans', sans-serif;
     --darkGrey: rgb(44, 42, 39);
-    --lightGrey: rgb(236, 236, 236);
-    --mediumGrey: rgb(228, 228, 228);
+    --lightGrey: rgb(228, 228, 228);
     --darkRed: rgb(161, 46, 33);
     --yellow: rgb(246, 210, 78);
+    --boxShadow: 6px 6px 20px rgba(0, 0, 0, 0.05);
 }
 
 body{
     font-family: var(--bodyFont);
     font-size: 14px;
     color: var(--darkGrey);
-    height: 150vh;
+    background: rgb(245, 245, 245);;
 }
 
 a{
@@ -67,7 +67,7 @@ h1 .name {
 
 h1 .role{
     font-family: var(--bodyFont);
-    font-weight: 500;
+    font-weight: 400;
     font-size: 0.7em;
 }
 
@@ -100,7 +100,7 @@ h1 .role{
     border-radius: 25px;
     margin: -10px;
     align-self: flex-end;
-    opacity: 0.7;
+    opacity: 0.6;
 }
 
 .mouse::after {
@@ -240,18 +240,19 @@ h1 .role{
 }
 
 .about-wrapper{
-    width: 90%;
+    width: 95%;
+    box-sizing: border-box;
     min-height: 200px;
     margin: 0 auto;
     padding: 20px;
     display: flex;
-    border: 1px solid var(--lightGrey);
-    box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.05);
+    box-shadow: var(--boxShadow);
+    background: white;
 }
 
 .personal-info{
     width: 35%;
-    border-right: 1px solid var(--mediumGrey);
+    border-right: 1px solid var(--lightGrey);
     text-align: left;
     display: flex;
     flex-direction: column;
@@ -264,16 +265,18 @@ h1 .role{
 
 .personal-info p{
     margin: 0;
-    line-height: 2.5em;
+    line-height: 2.2em;
 }
 
 .personal-info .info{
     color: var(--darkRed);
     font-family: var(--headerFont);
+    font-weight: 800;
 }
 
 .personal-description {
     width: 65%;
+    box-sizing: border-box;
     padding: 15px;
     padding-right: 50px;
     text-align: left;
@@ -281,18 +284,110 @@ h1 .role{
     letter-spacing: 0.02em;
     display: flex;
     align-items: center;
+    font-weight: 400;
 }
 
 .personal-description p{
     margin: 0;
 }
 
+/* SKILLS */
+
+.skills {
+    text-align: center;
+    margin: 50px;
+}
+
+.skills-wrapper {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between
+}
+
+.hard-skills,
+.soft-skills{
+    width: 47%;
+    min-height: 200px;
+    box-shadow: var(--boxShadow);
+    background: white;
+    padding: 5px 40px;
+    box-sizing: border-box;
+}
+
+.skills h3 {
+    font-family: var(--headerFont);
+    margin: 10px;
+}
+
+.skills .underline {
+    border-bottom: 1.5px solid var(--yellow);
+}
+
+.single-skill {
+    text-align: left;
+    font-size: .9em;
+    margin: 20px 0;
+}
+
+.single-skill h4 {
+    margin: 5px;
+}
+
+.single-skill .skill-bar {
+    width: 100%;
+    height: 7px;
+    background: var(--lightGrey);
+    border-radius: 3px;
+    position: relative;
+}
+
+.single-skill .skill-bar::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 7px;
+    background: var(--yellow);
+    border-radius: 3px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.single-skill .skill-bar::after {
+    content: '';
+    display: block;
+    width: 12px;
+    height: 12px;
+    background: rgb(244, 215, 107) ;
+    border-radius: 50%;
+    position: absolute;
+    left: calc(100% - 6px);
+    top: -2.5px;
+}
+
+.single-skill .skill-bar.good::before {
+    width: 75%;
+}
+
+.single-skill .skill-bar.good::after {
+    left: calc(75% - 6px);
+}
+
+.single-skill .skill-bar.medium::before {
+    width: 50%;
+}
+
+.single-skill .skill-bar.medium::after {
+    left: calc(50% - 6px);
+}
 
 
 @keyframes scrolldown{
     from {top: 4px; opacity: 1;}
     to {top: 25px; opacity: 0;}
 }
+
 
 
 
