@@ -3,7 +3,7 @@
     --headerFont: 'Noto Sans', sans-serif;
     --darkGrey: rgb(44, 42, 39);
     --lightGrey: rgb(228, 228, 228);
-    --darkRed: rgb(161, 46, 33);
+    --darkRed: rgb(185, 57, 62);
     --yellow: rgb(246, 210, 78);
     --boxShadow: 6px 6px 20px rgba(0, 0, 0, 0.05);
 }
@@ -232,7 +232,7 @@ h1 .role{
     border: 1px solid var(--yellow);
 }
 
-/* main  about */
+/* main about */
 
 .about{
     text-align: center;
@@ -291,7 +291,7 @@ h1 .role{
     margin: 0;
 }
 
-/* SKILLS */
+/* main skills */
 
 .skills {
     text-align: center;
@@ -302,7 +302,7 @@ h1 .role{
     width: 95%;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
 }
 
 .hard-skills,
@@ -382,6 +382,82 @@ h1 .role{
     left: calc(50% - 6px);
 }
 
+/* main portfolio */
+.portfolio {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.portfolio a {
+    color: var(--darkRed);
+    font-weight: 800;
+}
+
+.portfolio-wrapper {
+    text-align: left;
+    width: 90%;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+}
+
+.single-work .img-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.single-work .img-wrapper .overlay{
+    opacity: 0;
+    transition: opacity 1s;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 600;
+}
+
+.single-work .img-wrapper .overlay p{
+    display:none;
+}
+
+.single-work img{
+    width: 100%;
+    display: block;
+    transition: all 3s;
+}
+
+.single-work .img-wrapper:hover img {
+    transform: scale(1.1) rotate(-1deg);
+    filter: blur(4px);
+}
+
+.single-work .img-wrapper:hover .overlay {
+    background: rgb(0,0,0,0.5);
+    opacity: 1;
+    cursor: defaut;
+}
+
+.single-work .img-wrapper:hover .overlay p{
+    display: block;
+}
+
+.single-work h3 {
+    margin: 15px 0 0 0;
+}
+
+.single-work .work-description {
+    opacity: 0.6;
+    font-size: .9em;
+    line-height: 1.3em;
+    font-weight: 600;
+}
 
 @keyframes scrolldown{
     from {top: 4px; opacity: 1;}
