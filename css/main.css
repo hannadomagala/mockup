@@ -25,10 +25,16 @@ h2{
     font-family: var(--headerFont);
 }
 
-/* HEADER */
+::selection {
+    background: rgb(185, 57, 62, .9);
+    color: white;
+  }
+
+/* ........ HEADER ........ */
 
 .main-header {
     height: 80vh;
+    max-height: 600px;
     background: url('../img/header-cover.jpg')
                 center center / cover            
                 no-repeat;
@@ -37,7 +43,7 @@ h2{
     display: flex;
 }
 
-/* header welcome */
+/* ........ header welcome ........*/
 
 .header-welcome{
     width: 60%;
@@ -82,7 +88,7 @@ h1 .role{
     font-size: 0.7em;
 }
 
-/* header photo */
+/* ........ header photo ........*/
 
 .img-container {
     width: 280px;
@@ -103,7 +109,7 @@ h1 .role{
     height: auto;
 }
 
-/* header mousescroll */
+/* ........ header mousescroll ........ */
 
 .mouse {
     position: absolute;
@@ -132,7 +138,7 @@ h1 .role{
             animation: scrolldown 1s linear infinite;
 }
 
-/* header links */
+/* ........ header links ........ */
 
 .header-links {
     background: rgb(246, 210, 78,0.8);
@@ -224,7 +230,7 @@ h1 .role{
     margin: 0 auto;
 }
 
-/* main  introduction */
+/* ........ main  introduction ........ */
 
 .introduction {
     text-align: center;
@@ -262,7 +268,7 @@ h1 .role{
     border: 1px solid var(--yellow);
 }
 
-/* main about */
+/* ........ main about ........*/
 
 .about{
     text-align: center;
@@ -340,7 +346,7 @@ h1 .role{
     display: none;
 }
 
-/* main skills */
+/* ........ main skills ........ */
 
 .skills {
     text-align: center;
@@ -437,7 +443,8 @@ h1 .role{
     left: calc(50% - 6px);
 }
 
-/* main portfolio */
+/* ........ main portfolio ........ */
+
 .portfolio {
     text-align: center;
     margin-top: 80px;
@@ -530,7 +537,7 @@ h1 .role{
     font-weight: 600;
 }
 
-/* CONTACT */
+/* ........ CONTACT ........ */
 
 .contact {
     margin: 70px auto;
@@ -540,7 +547,7 @@ h1 .role{
 .contact-wrapper {
     width: 90%;
     margin: 30px auto;
-    margin-bottom: 10px;
+    margin-bottom: 0;
     text-align: left;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -616,6 +623,7 @@ h1 .role{
     font-size: .9em;
     font-weight: 600;
     outline-color: var(--darkRed);
+    background: transparent;
 }
 
 .contact-form label {
@@ -655,6 +663,7 @@ h1 .role{
     outline-color: var(--darkRed);
 }
 
+/* ........ ANIMATIONS ........ */
 
 @-webkit-keyframes scrolldown{
     from {top: 4px; opacity: 1;}
@@ -684,6 +693,8 @@ h1 .role{
         margin: 50px auto;
     }
 }
+
+/* ........ RWD ........ */
 
 @media screen and (max-width: 1010px) {
     .links-nav ul li {
@@ -960,6 +971,7 @@ h1 .role{
     .hard-skills,
     .soft-skills {
         width: 100%;
+        margin-bottom: 10px;
     }
 
     .portfolio-wrapper {
@@ -982,7 +994,8 @@ h1 .role{
     }
 
     .contact-form form {
-        font-size: 1.2em;
+        font-size: 1.4em;
+        padding: 20px;
     }
 
 }
