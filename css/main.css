@@ -34,6 +34,7 @@ h2{
 
 .main-header {
     height: 80vh;
+    min-height: 450px;
     max-height: 600px;
     background: url('../img/header-cover.jpg')
                 center center / cover            
